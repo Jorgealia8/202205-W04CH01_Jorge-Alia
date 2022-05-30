@@ -1,3 +1,4 @@
+import { Button } from '../Button/button';
 import './gentleman.css';
 
 export function Gentleman() {
@@ -42,7 +43,7 @@ export function Gentleman() {
                         <img
                             className="gentleman__avatar"
                             src={'./img/' + item.picture}
-                            alt={'The ' + item.name + ' pointing at you'}
+                            alt={item.alternativeText}
                         />
                         <span className="gentleman__initial">
                             {item.name === 'The Farytale'
@@ -73,8 +74,7 @@ export function Gentleman() {
                             </li>
                         </ul>
                     </div>
-                    <i className="icon gentleman__icon fas fa-check"></i>
-                    <i className="icon gentleman__icon gentleman__icon--delete fas fa-times"></i>
+                    <Button></Button>
                 </li>
             ))}
         </ul>
